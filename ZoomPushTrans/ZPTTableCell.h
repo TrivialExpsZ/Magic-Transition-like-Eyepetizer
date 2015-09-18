@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ZPTTableCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *transImgView;
+@property (nonatomic,strong) UIImageView *transImgView;
 
 @end

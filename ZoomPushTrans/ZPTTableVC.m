@@ -13,7 +13,7 @@
 #import "ZPTiMagicTrans.h"
 #import "ZPTMagicMoveTransition.h"
 
-static NSString * const reuseIdentifier = @"TableCell";
+static NSString * const reuseIdentifier = @"codedCell";
 
 @interface ZPTTableVC ()<UINavigationControllerDelegate,ZPTiMagicTransSource>
 
@@ -38,6 +38,8 @@ static NSString * const reuseIdentifier = @"TableCell";
     UIView *view = [UIView new];
     view.backgroundColor = [UIColor clearColor];
     [self.tableView setTableFooterView:view];
+    
+    [self.tableView registerClass:[ZPTTableCell class] forCellReuseIdentifier:@"codedCell"];
 }
 
 /**

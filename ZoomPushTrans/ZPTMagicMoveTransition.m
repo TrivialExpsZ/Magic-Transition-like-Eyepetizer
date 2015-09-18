@@ -31,7 +31,6 @@
     
     //获取展示用的ImageView
     UIImageView *destinationImageView = [toVC getDestinationImageView];
-    CGRect ha = [containerView convertRect:destinationImageView.frame fromView:toVC.view];
     
     //对cell截图备用，iOS7 方法
     UIView *snapShotView = [cell.transImgView snapshotViewAfterScreenUpdates:NO];
