@@ -29,17 +29,16 @@
     [fromVC setFinalIndexPath:[fromVC.tableView indexPathForSelectedRow]];
     UITableViewCell<ZPTiMagicTransCell> *cell = (UITableViewCell<ZPTiMagicTransCell> *)[fromVC.tableView cellForRowAtIndexPath:[fromVC.tableView indexPathForSelectedRow]];
     
-    //获取展示用的ImageView
-    UIImageView *destinationImageView = [toVC getDestinationImageView];
-    
     //对cell截图备用，iOS7 方法
-    UIView *snapShotView = [cell.transImgView snapshotViewAfterScreenUpdates:NO];
+    UIView *snapShotView = [cell.destinationScaleView
+                            snapshotViewAfterScreenUpdates:NO];
     
     //移花接木
-    CGRect finalRect = [containerView convertRect:cell.transImgView.frame fromView:cell.transImgView.superview];
+    CGRect finalRect = [containerView convertRect:cell.destinationScaleView.frame fromView:cell.destinationScaleView.superview];
     [fromVC setFinalTransRect:finalRect];
     snapShotView.frame = finalRect;
-    cell.transImgView .hidden = YES;
+    cell.destinationScaleView.hidden = YES;
+    (toVC.getDestinationImageView).hidden = YES;
     
     //把两个View加入容器，注意顺序有影响
     [containerView addSubview:toVC.view];
@@ -50,10 +49,10 @@
         toVC.view.alpha = 1.0;
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
-        CGRect destinationRect = CGRectMake(0, 64, screenRect.size.width , 250);
+        CGRect destinationRect = CGRectMake(0, 64, screenRect.size.width , 240);
         snapShotView.frame = [containerView convertRect:destinationRect fromView:toVC.view];
     } completion:^(BOOL finished) {
-        cell.imageView.hidden = NO;
+        cell.destinationScaleView.hidden = NO;
         [snapShotView removeFromSuperview];
         toVC.getDestinationImageView.hidden = NO;
         //告诉系统动画结束

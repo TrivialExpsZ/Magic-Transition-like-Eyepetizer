@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZPTTableCell : UITableViewCell
+@property (nonatomic,strong) UIView *destinationScaleView;
 @property (nonatomic,strong) UIImageView *transImgView;
 
 @end

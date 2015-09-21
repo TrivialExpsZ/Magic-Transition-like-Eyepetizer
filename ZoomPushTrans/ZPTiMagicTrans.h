@@ -21,11 +21,13 @@
 @protocol ZPTiMagicTransDestination <NSObject>
 
 -(UIImageView *)getDestinationImageView;
+-(UIView *)getMaskOfImageView;
 
 @end
 
 @protocol ZPTiMagicTransCell <NSObject>
 
+@property (strong, nonatomic) UIView *destinationScaleView;
 @property (strong, nonatomic) UIImageView *transImgView;
 
 @end

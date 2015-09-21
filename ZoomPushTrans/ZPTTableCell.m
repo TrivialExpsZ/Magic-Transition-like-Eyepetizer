@@ -42,14 +42,22 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.clipsToBounds = YES;
+        CGRect pantalla = [[UIScreen mainScreen] bounds];
+        
+        _destinationScaleView = [[UIView alloc] init];
+        //参数rebosanteY：（cell高度-destination的高度）/2.0
+        //如果使用self.contentView.bounds.size.height会出默认高度44.0
+        CGFloat rebosanteY = 30.0;
+        [_destinationScaleView setFrame:CGRectMake(0, -rebosanteY, pantalla.size.width, 240.0)];
         _transImgView = [[UIImageView alloc] init];
         UIImage *imagen = [UIImage imageNamed:@"food.jpeg"];
         [_transImgView setImage:imagen];
-        CGRect pantalla = [[UIScreen mainScreen] bounds];
+        
         CGFloat alturaEscala = pantalla.size.width / imagen.size.width *imagen.size.height;
         CGFloat origenY = 0.5 * (imagen.size.height - alturaEscala);
-        [_transImgView setFrame:CGRectMake(0, -origenY,  pantalla.size.width, alturaEscala)];
-        [self.contentView addSubview:_transImgView];
+        [_transImgView setFrame:CGRectMake(0, -origenY + rebosanteY,  pantalla.size.width, alturaEscala)];
+        [_destinationScaleView addSubview:_transImgView];
+        [self.contentView addSubview:_destinationScaleView];
         
         //不能使用contentMode = UIViewContentModeScaleAspectFill;
         //因为动画与这个模式不兼容

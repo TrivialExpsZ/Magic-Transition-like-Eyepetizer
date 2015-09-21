@@ -19,6 +19,8 @@
 		2E0640031BA7B08B0071BD06 /* food.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2E0640021BA7B08B0071BD06 /* food.jpeg */; };
 		2E0640061BA7E47D0071BD06 /* ZPTMagicMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0640051BA7E47D0071BD06 /* ZPTMagicMoveTransition.m */; };
 		2E06400E1BA8086D0071BD06 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E06400D1BA8086D0071BD06 /* d.jpg */; };
+		2E1E5AED1BAFDB4800FDF644 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1E5AEC1BAFDB4800FDF644 /* Reveal.framework */; };
+		2E1E5AF01BAFE56D00FDF644 /* ZPTMagicBackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5AEF1BAFE56D00FDF644 /* ZPTMagicBackTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,9 @@
 		2E0640051BA7E47D0071BD06 /* ZPTMagicMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPTMagicMoveTransition.m; sourceTree = "<group>"; };
 		2E06400A1BA7E9320071BD06 /* ZPTiMagicTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPTiMagicTrans.h; sourceTree = "<group>"; };
 		2E06400D1BA8086D0071BD06 /* d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d.jpg; sourceTree = "<group>"; };
-		2E277C8E1BAC066300CD9A18 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		2E1E5AEC1BAFDB4800FDF644 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		2E1E5AEE1BAFE56D00FDF644 /* ZPTMagicBackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPTMagicBackTransition.h; sourceTree = "<group>"; };
+		2E1E5AEF1BAFE56D00FDF644 /* ZPTMagicBackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPTMagicBackTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1E5AED1BAFDB4800FDF644 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +83,7 @@
 		2E063FC41BA7A99F0071BD06 = {
 			isa = PBXGroup;
 			children = (
-				2E277C8E1BAC066300CD9A18 /* Reveal.framework */,
+				2E1E5AEC1BAFDB4800FDF644 /* Reveal.framework */,
 				2E063FCF1BA7A99F0071BD06 /* ZoomPushTrans */,
 				2E063FE91BA7A99F0071BD06 /* ZoomPushTransTests */,
 				2E063FCE1BA7A99F0071BD06 /* Products */,
@@ -110,6 +115,8 @@
 				2E0640041BA7E47D0071BD06 /* ZPTMagicMoveTransition.h */,
 				2E0640051BA7E47D0071BD06 /* ZPTMagicMoveTransition.m */,
 				2E06400A1BA7E9320071BD06 /* ZPTiMagicTrans.h */,
+				2E1E5AEE1BAFE56D00FDF644 /* ZPTMagicBackTransition.h */,
+				2E1E5AEF1BAFE56D00FDF644 /* ZPTMagicBackTransition.m */,
 			);
 			path = ZoomPushTrans;
 			sourceTree = "<group>";
@@ -250,6 +257,7 @@
 				2E063FD61BA7A99F0071BD06 /* AppDelegate.m in Sources */,
 				2E063FD31BA7A99F0071BD06 /* main.m in Sources */,
 				2E063FFE1BA7ABB00071BD06 /* ZPTSubVC.m in Sources */,
+				2E1E5AF01BAFE56D00FDF644 /* ZPTMagicBackTransition.m in Sources */,
 				2E0640061BA7E47D0071BD06 /* ZPTMagicMoveTransition.m in Sources */,
 				2E063FFB1BA7AB880071BD06 /* ZPTTableVC.m in Sources */,
 			);
